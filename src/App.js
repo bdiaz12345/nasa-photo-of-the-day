@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import "./App.css";
 import axios from 'axios';
 import Header from './Header'
+import Middle from './Middle'
+
 
 
 axios
@@ -9,7 +11,7 @@ axios
   .then(res => {
     console.log(res.data)
   })
-  
+
 function App() {
   const [data, setData] = useState([]);
 
@@ -28,6 +30,7 @@ function App() {
   return (
     <div className="App">
       <Header title={data.title} />
+      <Middle video={data.url} explanation={data.explanation} />
       
     </div>
   );
