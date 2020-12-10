@@ -20,13 +20,17 @@ const SuperWrapper = styled.div`
     align-items: center;
 `
 
+const Image = styled.img`
+    width: 40%;
+`
+
 const Middle = (props) => {
-    const { video, explanation } = props
+    const { image, explanation } = props
 
     return (
         <SuperWrapper>
             <Wrapper>
-                <ReactPlayer url={video} />
+                <Image src={image} />
                 <Description>{explanation}</Description>
             </Wrapper>
         </SuperWrapper>

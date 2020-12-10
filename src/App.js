@@ -30,7 +30,7 @@ function App() {
   return (
     <div className="App">
       <Header title={data.title} />
-      <Middle video={data.url} explanation={data.explanation} />
+      <Middle image={data.url} explanation={data.explanation} />
       
     </div>
   );
